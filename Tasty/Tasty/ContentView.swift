@@ -18,6 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
+            
             ListPage(viewModel: ListViewModel())
                 .tabItem {Label("List", systemImage: "house")}
                 .tag(Tab.list)

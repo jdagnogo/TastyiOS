@@ -22,6 +22,7 @@
 		57D5C62029A3E02B00689E66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C61F29A3E02B00689E66 /* Result.swift */; };
 		57D5C62329A3E18F00689E66 /* RecipeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C62229A3E18F00689E66 /* RecipeItem.swift */; };
 		57D5C62529A3EE0800689E66 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C62429A3EE0800689E66 /* RecipeRow.swift */; };
+		57E223DF29A7B5E40055F9B5 /* RecipeStarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E223DE29A7B5E40055F9B5 /* RecipeStarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		57D5C61F29A3E02B00689E66 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		57D5C62229A3E18F00689E66 /* RecipeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItem.swift; sourceTree = "<group>"; };
 		57D5C62429A3EE0800689E66 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+		57E223DE29A7B5E40055F9B5 /* RecipeStarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				573C43F5299FACD600F35D7B /* ListPage.swift */,
 				57D5C62229A3E18F00689E66 /* RecipeItem.swift */,
 				57D5C62429A3EE0800689E66 /* RecipeRow.swift */,
+				57E223DE29A7B5E40055F9B5 /* RecipeStarItem.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				573C43C4299F703700F35D7B /* ContentView.swift in Sources */,
+				57E223DF29A7B5E40055F9B5 /* RecipeStarItem.swift in Sources */,
 				573C43F6299FACD600F35D7B /* ListPage.swift in Sources */,
 				57D5C61E29A3DFEC00689E66 /* ListViewModel.swift in Sources */,
 				57D5C62329A3E18F00689E66 /* RecipeItem.swift in Sources */,

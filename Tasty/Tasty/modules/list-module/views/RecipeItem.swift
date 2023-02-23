@@ -14,22 +14,20 @@ struct RecipeItem: View {
             AsyncImage(url: URL(string: recipe.imageUrl)) { image in
                 image
                     .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight : 200)
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(.white, lineWidth: 4)
-                    }
-                    .shadow(radius: 7)
+                    .scaledToFill()
+                    .frame(maxWidth: 150,maxHeight : 150)
+                    .clipShape(Rectangle())
+            
                  
                 } placeholder: {
                     Color.gray.opacity(0.1)
-                }
+                }.padding(.trailing)
             
             
             
             Text(recipe.name)
-            
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
         }
         
     }

@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct RecipeRow: View {
+    let rowTitle : String
     let recipes : Array<Recipe>
     var body: some View {
         VStack(alignment: .leading) {
-            Text("TITLE")
+            Text(rowTitle)
                         .font(.headline)
-                        .padding(.leading, 15)
-                        .padding(.top, 5)
+                        .foregroundColor(.pink)
+                        .bold()
+                        .padding(.leading, 16)
 
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 0) {
-                            ForEach(recipes) { recipe in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach(recipes) { recipe in
                                 RecipeItem(recipe: recipe)
                             }
                         }
@@ -30,6 +32,6 @@ struct RecipeRow: View {
 
 struct RecipeRow_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeRow(recipes: fakeData)
+        RecipeRow(rowTitle: "Trending", recipes: fakeData)
     }
 }

@@ -16,15 +16,15 @@ struct ListPage: View {
         case .success(let recipes):
             ScrollView(.vertical, showsIndicators: false) {
                 VStack{
-                    Text("Welcome")
+                    RecipeStarItem(recipe: recipes[0])
                     
-                    RecipeRow(recipes: recipes)
+                    RecipeRow(rowTitle: "Trending",recipes: recipes)
                     
-                    RecipeRow(recipes: recipes)
+                    RecipeRow(rowTitle: "Popular Recipes this week",recipes: recipes)
                     
-                    RecipeRow(recipes: recipes)
+                    RecipeRow(rowTitle: "",recipes: recipes)
                     
-                    RecipeRow(recipes: recipes)
+                    RecipeRow(rowTitle: "",recipes: recipes)
                 }
             }
         
