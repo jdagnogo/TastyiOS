@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.red
+        UITabBar.appearance().unselectedItemTintColor = UIColor.white
+        
+    }
     @State private var selection: Tab = .list
     
     enum Tab {
@@ -16,25 +20,32 @@ struct ContentView: View {
         case list
     }
     
+    fileprivate func extractedFunc() -> ListPage {
+        return ListPage(
+            viewModel: ListViewModel(
+                getRecipesInterator: GetRecipesInteratorImpl(apiService: TastyApiService(urlSession: URLSession.shared))
+            )
+        )
+    }
+    
     var body: some View {
         TabView(selection: $selection) {
             
-            ListPage(viewModel: ListViewModel())
+            extractedFunc()
                 .tabItem {Label("List", systemImage: "house")}
                 .tag(Tab.list)
             
             LikedUIView()
                 .tabItem {Label("Liked", systemImage: "star.fill")}
                 .tag(Tab.liked)
-        }
+        }.accentColor(.black)
     }
 }
 
 func setupAppearance() {
-    UIPageControl.appearance().backgroundColor = .blue
+    UIPageControl.appearance().backgroundColor = .systemBlue
     UIPageControl.appearance().currentPageIndicatorTintColor = .black
-    UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
- }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

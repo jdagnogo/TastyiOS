@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573B4A1F29A8F63B00EE4AA7 /* GetRecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B4A1E29A8F63B00EE4AA7 /* GetRecipesInteractor.swift */; };
+		573B4A2129A8F74700EE4AA7 /* TastyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B4A2029A8F74700EE4AA7 /* TastyApiService.swift */; };
+		573B4A2429A90D9000EE4AA7 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B4A2329A90D9000EE4AA7 /* EndPoint.swift */; };
+		573B4A2629A9131C00EE4AA7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B4A2529A9131C00EE4AA7 /* Result.swift */; };
+		573B4A2829AA050A00EE4AA7 /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B4A2729AA050A00EE4AA7 /* RecipeResponse.swift */; };
 		573C43C2299F703700F35D7B /* TastyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C43C1299F703700F35D7B /* TastyApp.swift */; };
 		573C43C4299F703700F35D7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C43C3299F703700F35D7B /* ContentView.swift */; };
 		573C43C6299F703800F35D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573C43C5299F703800F35D7B /* Assets.xcassets */; };
@@ -19,7 +24,6 @@
 		573C43F6299FACD600F35D7B /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C43F5299FACD600F35D7B /* ListPage.swift */; };
 		573C43FD299FD66D00F35D7B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573C43FC299FD66D00F35D7B /* Recipe.swift */; };
 		57D5C61E29A3DFEC00689E66 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C61D29A3DFEC00689E66 /* ListViewModel.swift */; };
-		57D5C62029A3E02B00689E66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C61F29A3E02B00689E66 /* Result.swift */; };
 		57D5C62329A3E18F00689E66 /* RecipeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C62229A3E18F00689E66 /* RecipeItem.swift */; };
 		57D5C62529A3EE0800689E66 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5C62429A3EE0800689E66 /* RecipeRow.swift */; };
 		57E223DF29A7B5E40055F9B5 /* RecipeStarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E223DE29A7B5E40055F9B5 /* RecipeStarItem.swift */; };
@@ -43,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		573B4A1E29A8F63B00EE4AA7 /* GetRecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecipesInteractor.swift; sourceTree = "<group>"; };
+		573B4A2029A8F74700EE4AA7 /* TastyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastyApiService.swift; sourceTree = "<group>"; };
+		573B4A2329A90D9000EE4AA7 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		573B4A2529A9131C00EE4AA7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		573B4A2729AA050A00EE4AA7 /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
 		573C43BE299F703700F35D7B /* Tasty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		573C43C1299F703700F35D7B /* TastyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastyApp.swift; sourceTree = "<group>"; };
 		573C43C3299F703700F35D7B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +67,6 @@
 		573C43F5299FACD600F35D7B /* ListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPage.swift; sourceTree = "<group>"; };
 		573C43FC299FD66D00F35D7B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		57D5C61D29A3DFEC00689E66 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		57D5C61F29A3E02B00689E66 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		57D5C62229A3E18F00689E66 /* RecipeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItem.swift; sourceTree = "<group>"; };
 		57D5C62429A3EE0800689E66 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
 		57E223DE29A7B5E40055F9B5 /* RecipeStarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStarItem.swift; sourceTree = "<group>"; };
@@ -89,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573B4A2229A8F78900EE4AA7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				573B4A2029A8F74700EE4AA7 /* TastyApiService.swift */,
+				573B4A2329A90D9000EE4AA7 /* EndPoint.swift */,
+				573B4A2529A9131C00EE4AA7 /* Result.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		573C43B5299F703700F35D7B = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				573C43EC299F740100F35D7B /* AppConstants.swift */,
-				57D5C61F29A3E02B00689E66 /* Result.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -159,6 +176,7 @@
 		573C43EE299F74B600F35D7B /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				573B4A2229A8F78900EE4AA7 /* common */,
 				573C43F1299F74E500F35D7B /* liked-module */,
 				573C43F0299F74DC00F35D7B /* details-module */,
 				573C43EF299F74D000F35D7B /* list-module */,
@@ -173,7 +191,6 @@
 				573C43FA299FD54D00F35D7B /* views */,
 				573C43F9299FD52000F35D7B /* interactors */,
 				573C43F8299FD4FB00F35D7B /* entities */,
-				573C43F7299FD4F200F35D7B /* protocols */,
 			);
 			path = "list-module";
 			sourceTree = "<group>";
@@ -201,17 +218,11 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		573C43F7299FD4F200F35D7B /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = protocols;
-			sourceTree = "<group>";
-		};
 		573C43F8299FD4FB00F35D7B /* entities */ = {
 			isa = PBXGroup;
 			children = (
 				573C43FC299FD66D00F35D7B /* Recipe.swift */,
+				573B4A2729AA050A00EE4AA7 /* RecipeResponse.swift */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -219,6 +230,7 @@
 		573C43F9299FD52000F35D7B /* interactors */ = {
 			isa = PBXGroup;
 			children = (
+				573B4A1E29A8F63B00EE4AA7 /* GetRecipesInteractor.swift */,
 			);
 			path = interactors;
 			sourceTree = "<group>";
@@ -378,11 +390,15 @@
 				57D5C61E29A3DFEC00689E66 /* ListViewModel.swift in Sources */,
 				57D5C62329A3E18F00689E66 /* RecipeItem.swift in Sources */,
 				57D5C62529A3EE0800689E66 /* RecipeRow.swift in Sources */,
+				573B4A2629A9131C00EE4AA7 /* Result.swift in Sources */,
+				573B4A1F29A8F63B00EE4AA7 /* GetRecipesInteractor.swift in Sources */,
+				573B4A2129A8F74700EE4AA7 /* TastyApiService.swift in Sources */,
 				573C43ED299F740100F35D7B /* AppConstants.swift in Sources */,
 				573C43FD299FD66D00F35D7B /* Recipe.swift in Sources */,
 				573C43F4299FACA600F35D7B /* LikedUIView.swift in Sources */,
-				57D5C62029A3E02B00689E66 /* Result.swift in Sources */,
+				573B4A2429A90D9000EE4AA7 /* EndPoint.swift in Sources */,
 				573C43C2299F703700F35D7B /* TastyApp.swift in Sources */,
+				573B4A2829AA050A00EE4AA7 /* RecipeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Recipe :Identifiable{
-    internal var id:Int
-    internal var imageUrl:String
-    internal var name:String
-    internal var description:String
+struct Recipe :Identifiable, Decodable{
+    internal var id: Int
+    //internal var thumbnailUrl: String
+    internal var name: String
+    internal var description: String
+    internal var thumbnail_url: String = ""
 }

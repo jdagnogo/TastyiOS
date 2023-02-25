@@ -6,21 +6,32 @@
 //
 
 import Foundation
+import Combine
 
 class ListViewModel : ObservableObject{
-    @Published private(set) var state: Result = .success(items: fakeData)
+    @Published private(set) var state: Result = .idle
+    let getRecipesInterator : GetRecipesInterator
+    var cancellableSet: Set<AnyCancellable> = []
     
+    init(getRecipesInterator: GetRecipesInterator) {
+        self.getRecipesInterator = getRecipesInterator
+    }
+    
+    func loadData(){
+        print("starting ..")
+        self.state = .loading
+#warning("handle cancel ? ")
+       getRecipesInterator.invoke()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("Failed with error \(error)")
+                    self.state = .failed
+                }
+            }, receiveValue: { recipes in
+                print("Data retrieved with size \(recipes.count), response = \(recipes)")
+                self.state = .success(items: recipes)
+            })
+            .store(in: &cancellableSet)
+    }
 }
-
-
-enum Result {
-    case loading
-    case failed(AnyObject)
-    case success(items : Array<Recipe>)
-}
-
-let fakeData =
-[Recipe(id: 1, imageUrl: "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/341495.jpg", name: "title1", description: "description1"),
- Recipe(id: 2, imageUrl: "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/341495.jpg", name: "title2", description: "description2"),
-  Recipe(id: 3, imageUrl: "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/341495.jpg", name: "title3", description: "description3"),
-]

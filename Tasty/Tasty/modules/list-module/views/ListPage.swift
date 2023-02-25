@@ -13,6 +13,8 @@ struct ListPage: View {
     var body: some View {
         let state = viewModel.state
         switch state {
+        case .idle :
+            Color.clear.onAppear(perform: viewModel.loadData)
         case .success(let recipes):
             ScrollView(.vertical, showsIndicators: false) {
                 VStack{
@@ -27,17 +29,19 @@ struct ListPage: View {
                     RecipeRow(rowTitle: "",recipes: recipes)
                 }
             }
-        
+            
         default:
             Text("Loading")
         }
-           
+        
     }
 }
 
 struct ListPage_Previews: PreviewProvider {
     static var previews: some View {
-        ListPage(viewModel: ListViewModel())
+        ListPage(
+            viewModel: ListViewModel(getRecipesInterator: GetRecipesInteratorImpl(apiService: TastyApiService(urlSession: URLSession.shared)))
+        )
     }
 }
 

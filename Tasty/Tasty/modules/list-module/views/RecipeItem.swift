@@ -11,7 +11,7 @@ struct RecipeItem: View {
     let recipe : Recipe
     var body: some View {
         VStack{
-            AsyncImage(url: URL(string: recipe.imageUrl)) { image in
+            AsyncImage(url: URL(string: recipe.thumbnail_url)) { image in
                 image
                     .resizable()
                     .scaledToFill()
